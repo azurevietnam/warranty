@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <field name="id" type="hidden" default="0" label="COM_WARRANTY_FORM_LBL_ID" readonly="true" class="readonly" description="JGLOBAL_FIELD_ID_DESC" />
+    <fieldset name="basic">
+        <field name="code" type="text" label="COM_WARRANTY_FORM_LBL_CODE" required="true"/>
+        <field name="desc_tw" type="textarea" label="COM_WARRANTY_FORM_LBL_DESCRIPTION_IN_TW" />
+        <field name="desc_en" type="textarea" label="COM_WARRANTY_FORM_LBL_DESCRIPTION_IN_EN" />
+        <field name="desc_vi" type="textarea" label="COM_WARRANTY_FORM_LBL_DESCRIPTION_IN_VI" />
+        <field name="modified" type="text" label="Modified" description="" readonly="true"/>
+        <field name="modified_by" type="user" label="Modified By"  description="" readonly="true"/>
+    </fieldset>
+</form>

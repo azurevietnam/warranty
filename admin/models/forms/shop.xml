@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <field name="id" type="hidden" default="0" label="COM_WARRANTY_FORM_LBL_ID" readonly="true" class="readonly" description="JGLOBAL_FIELD_ID_DESC" />
+    <fieldset name="basic">
+        <field name="code" type="text" label="COM_WARRANTY_FORM_LBL_CODE" description="COM_WARRANTY_FORM_DESC_CODE"/>
+        <field name="name" type="text" label="COM_WARRANTY_FORM_LBL_NAME" required="true" />
+        <field name="address" type="text" label="COM_WARRANTY_FORM_LBL_ADDRESS" />
+        <field name="phone" type="text" label="COM_WARRANTY_FORM_LBL_PHONE" />
+    </fieldset>
+    <fieldset name="basic1">
+        <field name="created" type="text" label="Created" description="" readonly="true"/>
+        <field name="created_by" type="user" label="Created By"  description="" readonly="true"/>
+        <field name="modified" type="text" label="Modified" description="" readonly="true"/>
+        <field name="modified_by" type="user" label="Modified By"  description="" readonly="true"/>
+    </fieldset>
+</form>

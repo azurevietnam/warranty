@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <field name="id" type="hidden" default="0" label="COM_WARRANTY_FORM_LBL_ID" readonly="true" class="readonly" description="JGLOBAL_FIELD_ID_DESC" />
+    <fieldset name="basic">
+        <field name="product" type="sql" query="SELECT id, title FROM #__content WHERE catid IN (79,81,82,83,84,85)" key_field="id" value_field="title" label="COM_WARRANTY_FORM_LBL_PRODUCT" description="COM_WARRANTY_FORM_DESC_PRODUCT" required="true"/>
+        <field name="field1" type="text" label="COM_WARRANTY_FORM_LBL_FIELD_1" />
+        <field name="field2" type="text" label="COM_WARRANTY_FORM_LBL_FIELD_2" />
+        <field name="field3" type="text" label="COM_WARRANTY_FORM_LBL_FIELD_3" />
+        <field name="field4" type="text" label="COM_WARRANTY_FORM_LBL_FIELD_4" />
+        <field name="field5" type="text" label="COM_WARRANTY_FORM_LBL_FIELD_5" />
+        <field name="field6" type="text" label="COM_WARRANTY_FORM_LBL_FIELD_6" />
+        <field name="field7" type="text" label="COM_WARRANTY_FORM_LBL_FIELD_7" />
+        <field name="field8" type="text" label="COM_WARRANTY_FORM_LBL_FIELD_8" />
+        <field name="field9" type="text" label="COM_WARRANTY_FORM_LBL_FIELD_9" />
+        <field name="field10" type="text" label="COM_WARRANTY_FORM_LBL_FIELD_10" />
+        <field name="description" type="editor" label="COM_WARRANTY_FORM_LBL_DESCRIPTION" filter="raw" />
+        <field name="modified" type="text" label="Modified" description="" readonly="true"/>
+        <field name="modified_by" type="user" label="Modified By"  description="" readonly="true"/>
+    </fieldset>
+</form>

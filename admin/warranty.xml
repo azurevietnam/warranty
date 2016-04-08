@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+    <name>com_warranty</name>
+    <creationDate>2015-06-17</creationDate>
+    <copyright>Copyright (C) 2015. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <author>Chau Dang Khoa</author>
+    <authorEmail>boyupdatetofuture@gmail.com</authorEmail>
+    <authorUrl></authorUrl>
+    <version>1.0.0</version>
+    <description></description>
+    
+    
+    
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>warranty.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+        <folder>views</folder>
+        <folder>models</folder>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+        <folder>assets</folder>
+    </files>
+    <languages folder="languages/site">
+        
+			<language tag="en-GB">en-GB/en-GB.com_warranty.ini</language>
+    </languages>
+    <administration>
+        <menu img="components/com_warranty/assets/images/s_com_warranty.png" >COM_WARRANTY</menu>
+        <submenu>
+			<menu link="option=com_warranty&amp;view=products" view="products" alt="Warranty/Products">COM_WARRANTY_TITLE_PRODUCTS</menu>
+			<menu link="option=com_warranty&amp;view=specs" view="specs" alt="Warranty/Specs">COM_WARRANTY_TITLE_SPECS</menu>
+			<menu link="option=com_warranty&amp;view=types" view="types" alt="Warranty/Models">COM_WARRANTY_TITLE_MODELS</menu>
+			<menu link="option=com_warranty&amp;view=errors" view="errors" alt="Warranty/Errors">COM_WARRANTY_TITLE_ERRORS</menu>
+			<menu link="option=com_warranty&amp;view=requests" view="requests" alt="Warranty/Requests">COM_WARRANTY_TITLE_REQUESTS</menu>
+			<menu link="option=com_warranty&amp;view=papers" view="papers" alt="Warranty/Papers">COM_WARRANTY_TITLE_PAPERS</menu>
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>warranty.php</filename>
+            <folder>controllers</folder>
+            <folder>assets</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="languages/administrator">
+			<language tag="en-GB">en-GB/en-GB.com_warranty.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_warranty.sys.ini</language>
+        </languages>
+    </administration>
+</extension>

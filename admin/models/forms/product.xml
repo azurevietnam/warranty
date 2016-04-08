@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <field name="id" type="hidden" default="0" label="COM_WARRANTY_FORM_LBL_ID" readonly="true" class="readonly" description="JGLOBAL_FIELD_ID_DESC" />
+    <fieldset name="shop_info">
+        <field name="shop_name" type="text" label="COM_WARRANTY_FORM_LBL_SHOP_NAME" description="COM_WARRANTY_FORM_DESC_SHOP_NAME" />
+        <field name="shop_address" type="text" label="COM_WARRANTY_FORM_LBL_SHOP_ADDRESS" description="COM_WARRANTY_FORM_DESC_SHOP_ADDRESS" />
+        <field name="shop_region" type="text" label="COM_WARRANTY_FORM_LBL_SHOP_REGION" description="COM_WARRANTY_FORM_DESC_SHOP_REGION" />
+        <field name="sender" type="text" label="COM_WARRANTY_FORM_LBL_SENDER" description="COM_WARRANTY_FORM_DESC_SENDER" />
+    </fieldset>
+    <fieldset name="customer_info">
+        <field name="customer_id" type="user" label="Customer" description="Customer" />
+        <field name="customer_name" type="text" label="COM_WARRANTY_FORM_LBL_CUSTOMER_NAME" description="COM_WARRANTY_FORM_DESC_CUSTOMER_NAME" />
+        <field name="customer_address" type="text" label="COM_WARRANTY_FORM_LBL_CUSTOMER_ADDRESS" description="COM_WARRANTY_FORM_DESC_CUSTOMER_ADDRESS" />
+        <field name="customer_phone" type="text" label="COM_WARRANTY_FORM_LBL_CUSTOMER_PHONE" description="COM_WARRANTY_FORM_DESC_CUSTOMER_PHONE" />
+        <field name="customer_note" type="textarea" label="COM_WARRANTY_FORM_LBL_CUSTOMER_NOTE" description="COM_WARRANTY_FORM_DESC_CUSTOMER_NOTE" />
+    </fieldset>
+    <fieldset name="product_info">
+        <field name="manufacturer" type="text" label="Manufacturer" description="Manufacturer"/>
+        <field name="active" type="calendar" default="00-00-0000" label="COM_WARRANTY_FORM_LBL_ACTIVE_TIME" description="COM_WARRANTY_FORM_DESC_ACTIVE_TIME" format="%d-%m-%Y" required="true"/>
+        <field name="imei" type="text" label="COM_WARRANTY_FORM_LBL_IMEI" description="COM_WARRANTY_FORM_DESC_IMEI" required="true"/>
+        <field name="model" type="text" label="COM_WARRANTY_FORM_LBL_MODEL" description="COM_WARRANTY_FORM_DESC_MODEL" />
+        <field name="color" type="text" label="COM_WARRANTY_FORM_LBL_COLOR" description="COM_WARRANTY_FORM_DESC_COLOR" />
+        <field name="image" type="media" label="COM_WARRANTY_FORM_LBL_IMAGE" description="COM_WARRANTY_FORM_DESC_IMAGE" />
+        <field name="error" type="sql" query="SELECT id AS value, CONCAT(code,' - ', desc_vi) AS title FROM #__warranty_errors" key_field="value" value_field="title" label="COM_WARRANTY_FORM_LBL_ERROR" description="COM_WARRANTY_FORM_DESC_ERROR">
+            <option value="">COM_WARRANTY_FILTER_SELECT</option>
+        </field>
+        <field name="phone_status" type="textarea" label="COM_WARRANTY_FORM_LBL_STATUS" description="COM_WARRANTY_FORM_DESC_STATUS" rows="10" class="input-block-level"/>
+        <field name="sell_in" type="text" label="COM_WARRANTY_FORM_LBL_SELL_IN" description="COM_WARRANTY_FORM_DESCL_SELL_IN" />
+        <field name="status" type="radio" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="btn-group" default="1">
+            <option value="1">Active</option>
+            <option value="0">Inactive</option>
+        </field>
+        <field name="modified" type="text" label="Modified" description="" readonly="true"/>
+        <field name="modified_by" type="user" label="COM_WARRANTY_FORM_LBL_MODIFIED_BY"  description="" readonly="true"/>
+        <field name="created" type="text" label="Import Date" description="" readonly="true" filter="unset"/>
+        <field name="created_by" type="user" label="Importer"  description="" readonly="true" filter="unset"/>
+    </fieldset>
+    <field name="note" type="textarea" label="COM_WARRANTY_FORM_LBL_NOTE" description="COM_WARRANTY_FORM_DESC_NOTE" filter="raw" rows="20" class="input-block-level"/>
+</form>

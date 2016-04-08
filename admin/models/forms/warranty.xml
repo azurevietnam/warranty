@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <field name="id" type="hidden" default="0" label="COM_WARRANTY_FORM_LBL_ID" readonly="true" class="readonly" description="JGLOBAL_FIELD_ID_DESC" />
+    <fieldset name="basic">
+        <field name="received" type="calendar" label="COM_WARRANTY_FORM_LBL_RECEIVED" format="%Y-%m-%d" required="true"/>
+        <field name="shop_id" class="input-block-level" type="sql" default="" query="SELECT id, CASE code WHEN '' THEN CONCAT(id, ' - ', name, ' - ', phone) ELSE CONCAT(code, ' - ', name, ' - ', phone) END AS title FROM #__warranty_shops" key_field="id" value_field="title" label="COM_WARRANTY_FORM_LBL_CUSTOMER_NAME" required="true"/>
+        <field name="imei" type="text" label="COM_WARRANTY_FORM_LBL_IMEI" required="true" />
+        <field name="accessories" type="textarea" label="COM_WARRANTY_FORM_LBL_ACCESSORIES" />
+        <field name="errors" type="textarea" label="COM_WARRANTY_FORM_LBL_ERRORS" />
+        <field name="error_codes" type="text" label="Error Codes" />
+        <field name="delivery" type="calendar" label="COM_WARRANTY_FORM_LBL_DELIVERY" format="%Y-%m-%d"/>
+        <field name="warranty" type="textarea" label="COM_WARRANTY_FORM_LBL_WARRANTY" />
+        <field name="note" type="textarea" label="COM_WARRANTY_FORM_LBL_NOTE" />
+    </fieldset>
+    <fieldset name="basic1">
+        <field name="status" type="radio" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="btn-group" default="0">
+            <option value="0">COM_WARRANTY_WAIT</option>
+            <option value="1">COM_WARRANTY_ACCEPT</option>
+            <option value="2">COM_WARRANTY_DENY</option>
+        </field>
+        <field name="created" type="text" label="Created" description="" readonly="true"/>
+        <field name="created_by" type="user" label="Created By"  description="" readonly="true"/>
+        <field name="modified" type="text" label="Modified" description="" readonly="true"/>
+        <field name="modified_by" type="user" label="Modified By"  description="" readonly="true"/>
+    </fieldset>
+</form>
